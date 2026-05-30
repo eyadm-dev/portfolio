@@ -1,0 +1,742 @@
+.projectsSection {
+  min-height: 100vh;
+  height: 110vh;
+  display: flex;
+  align-items: center;
+  background: var(--bg-projects-section);
+  position: relative;
+  overflow: hidden;
+  padding: 2rem;
+}
+
+.container {
+  max-width: 1800px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.sectionTag {
+  display: inline-block;
+  font-size: 0.8rem;
+  letter-spacing: 3px;
+  color: var(--color-section-tag);
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.sectionTitle {
+  font-size: 2.3rem;
+  font-weight: 700;
+  background: var(--color-section-title);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 0.5rem;
+}
+
+.sectionDesc {
+  color: var(--text-muted);
+  max-width: 500px;
+  margin: 0 auto;
+  line-height: 1.5;
+  font-size: 0.85rem;
+}
+
+/* Slider Container */
+.sliderContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  min-height: 200px;
+}
+
+/* Card Base Styles */
+.card {
+  background: var(--bg-card);
+  backdrop-filter: blur(10px);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  border: var(--border-card);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  border-color: var(--border-card-hover);
+}
+
+/* Card 1: Far left */
+.sideCardFar {
+  width: 200px;
+  opacity: 0.5;
+}
+
+.sideCardFar .cardImage {
+  height: 120px;
+}
+
+.sideCardFar .cardContent {
+  padding: 0.7rem;
+}
+
+.sideCardFar .cardTitle {
+  font-size: 0.8rem;
+  margin-bottom: 0.2rem;
+}
+
+.sideCardFar .cardDesc {
+  font-size: 0.6rem;
+  line-height: 1.3;
+}
+
+/* Card 2: Left side */
+.sideCardLeft {
+  width: 240px;
+  opacity: 0.7;
+}
+
+.sideCardLeft .cardImage {
+  height: 140px;
+}
+
+.sideCardLeft .cardContent {
+  padding: 0.8rem;
+}
+
+.sideCardLeft .cardTitle {
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+}
+
+.sideCardLeft .cardDesc {
+  font-size: 0.65rem;
+}
+
+/* Card 3: Main Card */
+.mainCard {
+  width: 380px;
+  transform: scale(1.05);
+  border: var(--border-main-card);
+  z-index: 2;
+  box-shadow: var(--shadow-card-main);
+}
+
+.mainCard:hover {
+  transform: scale(1.06);
+  box-shadow: var(--shadow-card-main-hover);
+}
+
+/* Card 4: Right side */
+.sideCardRight {
+  width: 240px;
+  opacity: 0.7;
+}
+
+.sideCardRight .cardImage {
+  height: 120px;
+}
+
+.sideCardRight .cardContent {
+  padding: 0.8rem;
+}
+
+.sideCardRight .cardTitle {
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+}
+
+.sideCardRight .cardDesc {
+  font-size: 0.65rem;
+}
+
+/* Card Image */
+.cardImage {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  padding: 15px;
+}
+
+.mainCard .cardImage {
+  height: 220px;
+}
+
+.cardImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  border-radius: 10px;
+}
+
+.card:hover .cardImage img {
+  transform: scale(1.05);
+}
+
+.imageOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(23, 20, 30, 0.281);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.card:hover .imageOverlay {
+  opacity: 1;
+}
+
+.imageOverlay svg {
+  font-size: 1.2rem;
+  color: white;
+}
+
+.imageOverlay span {
+  color: white;
+  font-weight: 500;
+  font-size: 0.7rem;
+}
+
+/* Card Content */
+.cardContent {
+  padding: 1rem 1.5rem;
+  margin-bottom: 20px;
+}
+
+.cardCategory {
+  font-size: 0.65rem;
+  color: var(--color-section-tag);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 0.2rem;
+}
+
+.cardTitle {
+  color: var(--text-primary);
+  margin-bottom: 0.4rem;
+}
+
+.mainCard .cardTitle {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.cardDesc {
+  color: var(--text-muted);
+  line-height: 1.4;
+  margin-bottom: 0.6rem;
+}
+
+.mainCard .cardDesc {
+  font-size: 0.75rem;
+}
+
+/* Tech Stack */
+.techStack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 0.8rem;
+}
+
+.techBadge {
+  background: var(--bg-tech-badge);
+  padding: 0.2rem 0.6rem;
+  border-radius: 30px;
+  font-size: 0.6rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  border: var(--border-tech);
+}
+
+/* View Button */
+.viewBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--gradient-btn-view);
+  border: var(--border-cv);
+  padding: 0.4rem 0.8rem;
+  border-radius: var(--radius-btn);
+  color: var(--text-primary);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: fit-content;
+  font-size: 0.7rem;
+}
+
+.viewBtn:hover {
+  border-color: transparent;
+  transform: scale(1.05);
+}
+
+/* Navigation */
+.navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin: 1rem 0;
+}
+
+.navBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--gradient-btn-nav);
+  border: var(--border-cv);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-btn);
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  font-size: 0.8rem;
+}
+
+.navBtn:hover {
+  background: var(--color-dot-active);
+  border-color: transparent;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  gap: 0.9rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-dot-inactive);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.activeDot {
+  width: 20px;
+  border-radius: 10px;
+  background: var(--color-dot-active);
+}
+
+.viewAllWrapper {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+/* ========================================
+   أزرار التنقل على جوانب الشاشة
+   ======================================== */
+
+.sliderWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.sideNavBtn {
+  background: var(--gradient-btn-nav);
+  border: var(--border-cv);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: var(--text-primary);
+  font-size: 1.2rem;
+  backdrop-filter: blur(8px);
+  z-index: 10;
+}
+
+.sideNavBtn:hover {
+  background: var(--color-dot-active);
+  border-color: transparent;
+  box-shadow: var(--shadow-btn-hover);
+}
+
+.sideNavBtn {
+  position: relative;
+}
+
+.sideNavBtn:last-child {
+  left: 20px;
+}
+
+.sideNavBtn:first-child {
+  left: -20px;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .sliderContainer {
+    gap: 0.8rem;
+  }
+  
+  .sideCardFar {
+    width: 160px;
+  }
+  
+  .sideCardLeft, .sideCardRight {
+    width: 200px;
+  }
+  
+  .mainCard {
+    width: 320px;
+  }
+  
+  .mainCard .cardImage {
+    height: 180px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .projectsSection {
+    height: auto;
+    min-height: 100vh;
+    padding: 3rem 1rem;
+  }
+  
+  .sliderContainer {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .sideCardFar, .sideCardLeft, .sideCardRight, .mainCard {
+    width: 260px;
+  }
+  
+  .sideCardFar {
+    opacity: 0.8;
+  }
+  
+  .sideCardLeft, .sideCardRight {
+    opacity: 0.8;
+  }
+  
+  .mainCard {
+    transform: scale(1);
+    order: -1;
+    width: 280px;
+  }
+  
+  .sideNavBtn {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+  
+  .sliderWrapper {
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .sliderContainer {
+    justify-content: center;
+    gap: 0;
+  }
+  
+  .sideCardFar,
+  .sideCardLeft,
+  .sideCardRight {
+    display: none !important;
+  }
+  
+  .mainCard {
+    width: 90%;
+    max-width: 500px;
+    transform: scale(1);
+    margin: 0 auto;
+  }
+  
+  .mainCard .cardImage {
+    height: 220px;
+  }
+  
+  .sliderWrapper {
+    justify-content: center;
+  }
+  
+  .sideNavBtn {
+    position: relative;
+    transform: none;
+    left: 0 !important;
+    right: 0 !important;
+    margin: 0 0.5rem;
+  }
+  
+  .sideNavBtn:first-child,
+  .sideNavBtn:last-child {
+    position: relative;
+    left: 0;
+    right: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .projectsSection {
+    padding: 3rem 1rem;
+  }
+  
+  .sectionTag {
+    font-size: 0.7rem;
+  }
+  
+  .sectionTitle {
+    font-size: 1.6rem;
+  }
+  
+  .sectionDesc {
+    font-size: 0.75rem;
+    padding: 0 1rem;
+  }
+  
+  .sideCardFar,
+  .sideCardLeft,
+  .sideCardRight {
+    display: none !important;
+  }
+  
+  .mainCard {
+    width: 95%;
+    max-width: 450px;
+  }
+  
+  .mainCard .cardImage {
+    height: 200px;
+  }
+  
+  .mainCard .cardTitle {
+    font-size: 1.2rem;
+  }
+  
+  .mainCard .cardDesc {
+    font-size: 0.8rem;
+  }
+  
+  .sideNavBtn {
+    width: 40px;
+    height: 40px;
+    font-size: 0.9rem;
+    margin: 0 0.3rem;
+  }
+  
+  .sliderWrapper {
+    gap: 0.5rem;
+  }
+  
+  .pagination {
+    margin-top: 1.5rem;
+    gap: 0.6rem;
+  }
+  
+  .dot {
+    width: 8px;
+    height: 8px;
+  }
+  
+  .activeDot {
+    width: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .sectionTitle {
+    font-size: 1.5rem;
+  }
+  
+  .sectionDesc {
+    font-size: 0.75rem;
+    padding: 0 1rem;
+  }
+  
+  .sideCardFar, .sideCardLeft, .sideCardRight, .mainCard {
+    width: 100%;
+    max-width: 280px;
+  }
+  
+  .navigation {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .projectsSection {
+    padding: 2.5rem 0.8rem;
+  }
+  
+  .sectionTitle {
+    font-size: 1.4rem;
+  }
+  
+  .sectionDesc {
+    font-size: 0.7rem;
+  }
+  
+  .sideCardFar,
+  .sideCardLeft,
+  .sideCardRight {
+    display: none !important;
+  }
+  
+  .mainCard {
+    width: 100%;
+    max-width: 380px;
+  }
+  
+  .mainCard .cardImage {
+    height: 180px;
+  }
+  
+  .cardContent {
+    padding: 1rem !important;
+  }
+  
+  .mainCard .cardTitle {
+    font-size: 1.1rem;
+  }
+  
+  .mainCard .cardDesc {
+    font-size: 0.75rem;
+  }
+  
+  .techBadge {
+    font-size: 0.55rem;
+    padding: 0.2rem 0.6rem;
+  }
+  
+  .viewBtn {
+    font-size: 0.7rem;
+    padding: 0.4rem 0.8rem;
+  }
+  
+  .sideNavBtn {
+    width: 35px;
+    height: 35px;
+    font-size: 0.8rem;
+  }
+  
+  .pagination {
+    margin-top: 1rem;
+  }
+  
+  .dot {
+    width: 7px;
+    height: 7px;
+  }
+  
+  .activeDot {
+    width: 18px;
+  }
+}
+
+@media (max-width: 400px) {
+  .mainCard {
+    max-width: 320px;
+  }
+  
+  .mainCard .cardImage {
+    height: 150px;
+  }
+  
+  .mainCard .cardTitle {
+    font-size: 1rem;
+  }
+  
+  .mainCard .cardDesc {
+    font-size: 0.7rem;
+  }
+  
+  .sectionTitle {
+    font-size: 1.2rem;
+  }
+  
+  .sideNavBtn {
+    width: 30px;
+    height: 30px;
+    font-size: 0.7rem;
+  }
+}
+
+/* ========================================
+   إظهار التفاصيل في الكاردات الجانبية
+   ======================================== */
+
+.sideCardFar .cardContent,
+.sideCardLeft .cardContent,
+.sideCardRight .cardContent {
+  display: flex !important;
+  flex-direction: column;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.sideCardFar .cardTitle,
+.sideCardLeft .cardTitle,
+.sideCardRight .cardTitle,
+.sideCardFar .cardDesc,
+.sideCardLeft .cardDesc,
+.sideCardRight .cardDesc {
+  display: block !important;
+  color: var(--text-muted) !important;
+}
+
+.sideCardFar .cardContent {
+  padding: 0.7rem !important;
+}
+
+.sideCardLeft .cardContent,
+.sideCardRight .cardContent {
+  padding: 0.8rem !important;
+}
+
+.sideCardFar .cardCategory,
+.sideCardLeft .cardCategory,
+.sideCardRight .cardCategory {
+  display: block !important;
+  font-size: 0.6rem;
+  color: var(--color-section-tag);
+  margin-bottom: 0.2rem;
+}
+
+.sideCardFar .techStack,
+.sideCardLeft .techStack,
+.sideCardRight .techStack {
+  display: flex !important;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin-top: 0.3rem;
+}
+
+.sideCardFar .techBadge,
+.sideCardLeft .techBadge,
+.sideCardRight .techBadge {
+  display: inline-block !important;
+  font-size: 0.5rem;
+  padding: 0.15rem 0.5rem;
+}

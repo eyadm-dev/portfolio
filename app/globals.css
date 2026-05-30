@@ -1,0 +1,251 @@
+@import "tailwindcss";
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+    transition: background-color 0.4s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: clip;
+  max-width: 100%;
+}
+
+body {
+  background: var(--bg-projects-section);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: clip;
+  max-width: 100%;
+}
+
+/* السماح بالـ overflow الأفقي فقط لـ projects-gallery */
+#projects-gallery {
+  overflow-x: visible;
+  overflow-y: visible;
+  position: relative;
+  width: 100%;
+}
+
+#projects-gallery .scrollContainer,
+#projects-gallery .stickyWrapper,
+#projects-gallery .gallery {
+  overflow-x: visible;
+}
+
+/* ========================================
+   CSS VARIABLES
+   ======================================== */
+
+:root {
+  /* ===== Backgrounds ===== */
+  /* --bg-primary: transparent; */
+  --bg-navbar: rgba(0, 0, 0, 0.3);
+  --bg-card: rgba(25, 25, 45, 0.7);
+  --bg-card-hover: rgba(35, 35, 55, 0.8);
+  --bg-skill-card: rgba(92, 90, 90, 0.1);
+  --bg-mobile-menu: rgba(0, 0, 0, 0.95);
+  --bg-admin-card: rgba(25, 25, 45, 0.6);
+  --bg-input: rgba(255, 255, 255, 0.08);
+  --bg-footer: linear-gradient(160deg, #000000, #140042f2);
+
+  /* ===== Background Images ===== */
+  --bg-hero-image: url('/imgs/backp.png');
+  --bg-skills-image: url('/imgs/backsk.png');
+
+  /* ===== Text Colors ===== */
+  --text-primary: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.7);
+  --text-muted: rgba(255, 255, 255, 0.6);
+  --text-light: rgba(255, 255, 255, 0.5);
+  --text-accent: #a78bfa;
+  --text-hover: #c4b5fd;
+
+  /* ===== Specific Colors ===== */
+  --color-point: #544bf6;
+  --color-h3: #b6abfd;
+  --color-active-link: #a78bfa;
+  --color-skill-name: white;
+  --color-percentage: rgba(255, 255, 255, 0.8);
+  --color-section-tag: #8b5cf6;
+  --color-section-title: whitesmoke;
+  --color-dot-inactive: rgba(255, 255, 255, 0.3);
+  --color-dot-active: #8b5cf6;
+  --color-error: #f87171;
+  --color-success: #4ade80;
+  --color-address: rgba(67, 178, 15, 0.968);
+  --color-social-icon: rgba(255, 255, 255, 0.6);
+  --color-social-icon-hover: #8b5cf6;
+  --color-copyright: rgba(255, 255, 255, 0.4);
+
+  /* ===== Gradients ===== */
+  --gradient-logo: linear-gradient(135deg, #ffffff, #c178ec);
+  --gradient-logo-hover: linear-gradient(135deg, #ffffff, #d7cdff);
+  --gradient-title: linear-gradient(135deg, rgba(255, 255, 255, 0.982), rgba(241, 236, 251, 0.963));
+  --gradient-subtitle: linear-gradient(135deg, rgba(156, 95, 237, 0.982), rgba(1, 22, 255, 0.963));
+  --gradient-stats: linear-gradient(135deg, #ffffff, #c96ed3);
+  --gradient-progress: linear-gradient(90deg, #430bbda7, #7948d3fc);
+  --gradient-btn-cv: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(79, 70, 229, 0.1));
+  --gradient-btn-cv-hover: linear-gradient(135deg, #8b5cf6, #7c3aed);
+  --gradient-btn-view: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(79, 70, 229, 0.1));
+  --gradient-icon: linear-gradient(135deg, rgba(114, 4, 147, 0.721), rgba(3, 1, 35, 0.963));
+  --gradient-footer-title: linear-gradient(135deg, #ffffff, #a78bfa, #8b5cf6);
+  --gradient-stats-bg: linear-gradient(135deg, #fe5b4f24, #002ffe2f);
+  --bg-projects-section: linear-gradient(160deg, #000000, #140042f2);
+
+  /* ===== Borders ===== */
+  --border-navbar: 1px solid rgba(255, 255, 255, 0.1);
+  --border-card: 1px solid rgba(86, 16, 250, 0.2);
+  --border-card-hover: 1px solid rgba(67, 21, 174, 0.5);
+  --border-main-card: 2px solid rgba(76, 10, 231, 0.863);
+  --border-input: 1px solid rgba(89, 24, 240, 0.3);
+  --border-title: 1px solid rgba(79, 5, 250, 0.731);
+  --border-icon: 1px solid rgba(180, 2, 180, 0.799);
+  --border-cv: 1px solid rgba(139, 92, 246, 0.4);
+  --border-stats: 1px solid rgba(255, 255, 255, 0.1);
+  --border-tech: 1px solid rgba(139, 92, 246, 0.3);
+  --border-footer-top: 1px solid rgba(107, 57, 223, 0.2);
+  --border-footer-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  --border-backtotop: 1px solid rgba(139, 92, 246, 0.3);
+
+  /* ===== Shadows ===== */
+  --shadow-card-main: 0 5px 10px rgba(98, 0, 255, 0.799), 0 10px 40px rgba(73, 5, 230, 0.84);
+  --shadow-stats: 0 4px 10px rgba(131, 52, 181, 0.797);
+  --shadow-stats-hover: 0 4px 20px rgba(131, 52, 181, 0.797), 0 4px 50px rgba(131, 52, 181, 0.797);
+  --shadow-image: 1px 10px 20px rgba(50, 16, 199, 0.658);
+  --shadow-btn-hover: 0 5px 15px rgba(139, 92, 246, 0.4);
+  --shadow-focus: 0 0 0 3px rgba(139, 92, 246, 0.2);
+  --bg-backtotop-hover: rgba(139, 92, 246, 0.2);
+
+  /* ===== Border Radius ===== */
+  --radius-card: 1rem;
+  --radius-card-lg: 1.25rem;
+  --radius-btn: 40px;
+  --radius-input: 0.75rem;
+  --radius-title: 20px;
+  --radius-icon: 20px;
+}
+
+
+
+
+/* ========================================
+   LIGHT MODE VARIABLES
+   ======================================== */
+
+[data-theme="light"] {
+  /* ===== Backgrounds ===== */
+  --bg-primary: #f5f5f5;
+  --bg-navbar: rgba(255, 255, 255, 0.557);
+  --bg-card: rgba(255, 255, 255, 0.8);
+  --bg-card-hover: rgba(245, 245, 245, 0.9);
+  --bg-skill-card: rgba(200, 200, 200, 0.2);
+  --bg-mobile-menu: rgba(255, 255, 255, 0.95);
+  --bg-admin-card: rgba(255, 255, 255, 0.8);
+  --bg-input: rgba(0, 0, 0, 0.05);
+  --bg-footer: linear-gradient(160deg, #e0e0e0, #c0c0c0);
+
+
+   /* ===== Projects Section Variables - Light Mode ===== */
+--bg-projects-section: linear-gradient(160deg, #d7f1ff, #a9dbf5);
+--color-section-tag: #3aa8ed;
+--color-section-title: #1a1a1a;
+--color-dot-inactive: rgba(0, 0, 0, 0.3);
+--color-dot-active: #199fe7;
+--border-tech: 1px solid rgba(128, 102, 173, 0.3);
+--gradient-btn-view: linear-gradient(135deg, rgba(124, 58, 237, 0.15), rgba(79, 70, 229, 0.08));
+--radius-card: 1rem;
+--radius-btn: 40px;
+  /* ===== Text Colors ===== */
+  --text-primary: #1a1a1a;
+  --text-secondary: rgba(0, 0, 0, 0.7);
+  --text-muted: rgba(0, 0, 0, 0.6);
+  --text-light: rgba(0, 0, 0, 0.5);
+  --text-accent: #ffd15b;
+  --text-hover: #36b2f9;
+
+  /* ===== Specific Colors ===== */
+  --color-point: #f3cc68;
+  --color-h3: #10769e;
+  --color-active-link: #2c9cff;
+  --color-skill-name: #1a1a1a;
+  --color-percentage: rgba(0, 0, 0, 0.7);
+  --color-section-tag: #11cbf4;
+  --color-section-title: #1a1a1a;
+  --color-dot-inactive: rgba(0, 0, 0, 0.3);
+  --color-dot-active: #66affc;
+  --color-address: rgba(0, 100, 0, 0.9);
+  --color-social-icon: rgba(0, 0, 0, 0.5);
+  --color-social-icon-hover: #3a8bed;
+  --color-copyright: rgba(0, 0, 0, 0.4);
+
+  /* ===== Gradients (تعديل الألوان للوضع الفاتح) ===== */
+  --gradient-logo: linear-gradient(135deg, #55ccf4, #7a97f8);
+  --gradient-logo-hover: linear-gradient(135deg, #1a1a1a, #6d28d9);
+  --gradient-title: linear-gradient(135deg, #5bcdfa, #a4bafe);
+  --gradient-subtitle: linear-gradient(135deg, #46b4f9, #296aca);
+  --gradient-stats: linear-gradient(135deg, #1a1a1a, #7c3aed);
+  --gradient-btn-cv: linear-gradient(135deg, #5bcdfa, #91acffce);
+  --gradient-btn-cv1: linear-gradient(135deg, #5bcdfa99, #7799fd7c);
+  --gradient-btn-cv-hover: linear-gradient(135deg, #5bcdfa, #b3c6ff);
+  --gradient-btn-view: linear-gradient(135deg, rgba(96, 170, 254, 0.15), rgba(79, 70, 229, 0.08));
+  --gradient-icon: linear-gradient(135deg, #6bc5f5cc, #dfe8f3e6);
+  --gradient-btn-nav: linear-gradient(135deg, #85d9fa, #c9e1f2ce);
+  --gradient-footer-title: linear-gradient(135deg, #1a1a1a, #3a9fed, #28a1d9);
+
+  /* ===== Borders ===== */
+  --border-navbar: 1px solid rgba(0, 0, 0, 0.1);
+  --border-card: 1px solid rgba(67, 195, 255, 0.2);
+  --border-card-hover: 1px solid rgba(124, 58, 237, 0.5);
+  --border-main-card: 2px solid rgba(58, 159, 237, 0.6);
+  --border-input: 1px solid rgba(44, 179, 247, 0.3);
+  --border-title: 1px solid rgba(63, 185, 251, 0.651);
+  --border-icon: 1px solid rgba(203, 195, 217, 0.5);
+  --border-cv: 1px solid rgba(218, 214, 224, 0.4);
+  --border-tech: 1px solid rgba(124, 58, 237, 0.3);
+  --border-footer-top: 1px solid rgba(124, 58, 237, 0.2);
+  --border-backtotop: 1px solid rgba(58, 150, 237, 0.3);
+
+ 
+  
+
+
+   /* ===== Skills Section Variables - Light Mode ===== */
+--bg-skills: linear-gradient(135deg, #e8e8f0, #d0d0e0, #e8e8f0);
+--gradient-stats-bg: linear-gradient(135deg, #ebebeb, #99d8ef);
+--shadow-stats: 0 4px 10px rgba(0, 0, 0, 0.1);
+--shadow-stats-hover: 0 4px 20px rgba(0, 0, 0, 0.15), 0 4px 30px rgba(0, 0, 0, 0.1);
+--border-stats: 1px solid rgba(0, 0, 0, 0.1);
+--gradient-stats: linear-gradient(135deg, #54a6e9, #35cef1);
+--gradient-progress: linear-gradient(90deg, #b9daed, #74c2ef);
+--bg-skill-card: rgba(200, 200, 200, 0.3);
+--color-skill-name: #1a1a1a;
+--color-percentage: rgba(0, 0, 0, 0.7);
+
+
+  /* ===== Shadows ===== */
+  --shadow-card-main: 0 5px 10px rgba(0, 0, 0, 0.1), 0 10px 30px rgba(0, 0, 0, 0.1);
+  --shadow-stats: 0 4px 10px rgba(0, 0, 0, 0.1);
+  --shadow-stats-hover: 0 4px 20px rgba(0, 0, 0, 0.15), 0 4px 30px rgba(0, 0, 0, 0.1);
+  --shadow-image: 1px 10px 20px rgba(0, 0, 0, 0.15);
+  --shadow-btn-hover: 0 5px 15px rgba(11, 133, 232, 0.3);
+  --bg-backtotop-hover: rgba(124, 58, 237, 0.15);
+  --bg-hero-image: url('/imgs/g1.png');
+  --bg-skills-image: url('/imgs/g2.png');
+
+
+    --bg-hero: linear-gradient(135deg, #f0f0f5, #e0e0e8, #f0f0f5);
+  --bg-skills: linear-gradient(135deg, #f0f0f5, #e0e0e8, #f0f0f5);
+  --bg-projects-section: linear-gradient(160deg, #e8e8f0, #d0d0e0);
+  --bg-footer: linear-gradient(135deg, #e8e8f0, #d8d8e8, #e8e8f0);
+
+}

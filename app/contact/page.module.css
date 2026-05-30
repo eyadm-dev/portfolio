@@ -1,0 +1,354 @@
+.pageWrapper {
+  min-height: 100vh;
+  background: var(--bg-hero);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 6rem 2rem;
+}
+
+/* ========== Hero Section ========== */
+.heroSection {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.sectionTag {
+  display: inline-block;
+  font-size: 0.8rem;
+  letter-spacing: 3px;
+  color: var(--color-section-tag);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.pageTitle {
+  font-size: 3rem;
+  font-weight: 700;
+  background: var(--gradient-title);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 1rem;
+}
+
+.heroDesc {
+  color: var(--text-muted);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* ========== Main Content ========== */
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+/* ========== Contact Cards ========== */
+.contactCards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.contactCard {
+  background: var(--bg-admin-card);
+  backdrop-filter: blur(10px);
+  border-radius: 1.25rem;
+  padding: 1.5rem;
+  text-align: center;
+  border: var(--border-card);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  min-height: 120px;
+}
+
+.contactCard:hover {
+  border-color: var(--border-card-hover);
+  box-shadow: var(--shadow-btn-hover);
+}
+
+.cardIcon {
+  font-size: 2rem;
+  color: var(--color-dot-active);
+  margin-bottom: 0.8rem;
+}
+
+.cardTitle {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 0.3rem;
+}
+
+.cardValue {
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.cardValue:hover {
+  color: var(--color-dot-active);
+}
+
+/* ========== Form & Social Section ========== */
+.formSocial {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 2rem;
+}
+
+/* Form Container */
+.formContainer {
+  background: var(--bg-card);
+  backdrop-filter: blur(10px);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  border: var(--border-card);
+}
+
+.formTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.inputGroup {
+  width: 100%;
+}
+
+.input {
+  width: 100%;
+  padding: 1rem;
+  background: var(--bg-input);
+  border: var(--border-input);
+  border-radius: var(--radius-input);
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.input::placeholder {
+  color: var(--text-light);
+}
+
+.input:focus {
+  border-color: var(--color-dot-active);
+  box-shadow: var(--shadow-focus);
+}
+
+.textarea {
+  width: 100%;
+  padding: 1rem;
+  background: var(--bg-input);
+  border: var(--border-input);
+  border-radius: var(--radius-input);
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  outline: none;
+  resize: vertical;
+  font-family: inherit;
+}
+
+.textarea::placeholder {
+  color: var(--text-light);
+}
+
+.textarea:focus {
+  border-color: var(--color-dot-active);
+  box-shadow: var(--shadow-focus);
+}
+
+.submitBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  background: linear-gradient(135deg, var(--color-dot-active), var(--color-section-tag));
+  border: none;
+  padding: 1rem;
+  border-radius: var(--radius-input);
+  color: var(--text-primary);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.submitBtn:hover {
+  box-shadow: var(--shadow-btn-hover);
+  transform: translateY(-2px);
+}
+
+.successMsg {
+  background: rgba(34, 197, 94, 0.2);
+  border: 1px solid rgba(34, 197, 94, 0.4);
+  color: var(--color-success);
+  padding: 0.8rem;
+  border-radius: var(--radius-input);
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+/* Social Container */
+.socialContainer {
+  background: var(--bg-card);
+  backdrop-filter: blur(10px);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  border: var(--border-card);
+  text-align: center;
+}
+
+.socialTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.socialDesc {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin-bottom: 1.5rem;
+}
+
+.socialGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.socialCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  background: rgba(139, 92, 246, 0.1);
+  border: var(--border-cv);
+  border-radius: var(--radius-input);
+  padding: 0.8rem;
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.socialCard:hover {
+  background: rgba(139, 92, 246, 0.2);
+  border-color: var(--border-card-hover);
+}
+
+.socialIcon {
+  font-size: 1.2rem;
+  color: var(--color-dot-active);
+}
+
+.socialLabel {
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.availability {
+  margin-top: 1rem;
+}
+
+.availabilityBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(34, 197, 94, 0.15);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  color: var(--color-success);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background: var(--color-success);
+  border-radius: 50%;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.8); }
+}
+
+/* ========== Map Section ========== */
+.mapSection {
+  border-radius: 1rem;
+  overflow: hidden;
+  border: var(--border-card);
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 968px) {
+  .container {
+    padding: 4rem 1.5rem;
+  }
+  
+  .contactCards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .formSocial {
+    grid-template-columns: 1fr;
+  }
+  
+  .pageTitle {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 5rem 1rem;
+  }
+  
+  .pageTitle {
+    font-size: 2rem;
+  }
+  
+  .contactCards {
+    grid-template-columns: 1fr;
+  }
+  
+  .heroDesc {
+    font-size: 0.85rem;
+    padding: 0 1rem;
+  }
+  
+  .formContainer,
+  .socialContainer {
+    padding: 1.5rem;
+  }
+  
+  .formTitle,
+  .socialTitle {
+    font-size: 1.2rem;
+  }
+  
+  .socialGrid {
+    grid-template-columns: 1fr;
+  }
+}

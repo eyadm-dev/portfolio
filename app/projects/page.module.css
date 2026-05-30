@@ -1,0 +1,567 @@
+.pageWrapper {
+  min-height: 100vh;
+  background: var(--bg-hero);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 6rem 2rem;
+  min-height: 100vh;
+}
+
+/* ========== Header Section ========== */
+.pageHeader {
+  margin-bottom: 3rem;
+}
+
+.headerTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.sectionTag {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  font-size: 0.8rem;
+  letter-spacing: 3px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.point {
+  color: var(--color-section-tag);
+  position: relative;
+  bottom: 2px;
+}
+
+.pageTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: var(--gradient-title);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin: 0;
+}
+
+/* ========== Search ========== */
+.searchWrapper {
+  position: relative;
+  top: 90px;
+}
+
+.searchInput {
+  width: 500px;
+  padding: 0.75rem 2.5rem 0.75rem 1rem;
+  background: var(--bg-input);
+  border: var(--border-input);
+  border-radius: var(--radius-input);
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.searchInput::placeholder {
+  color: var(--text-light);
+}
+
+.searchInput:focus {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: var(--color-dot-active);
+  box-shadow: var(--shadow-focus);
+}
+
+.clearButton {
+  position: absolute;
+  right: 0.75rem;
+  top: 20%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  border-radius: 50%;
+  width: 1.75rem;
+  height: 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--text-primary);
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+}
+
+.clearButton:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-50%) scale(1.05);
+}
+
+/* ========== Filter Buttons ========== */
+.filterContainer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin: -2rem 0 0 0;
+  flex-wrap: wrap;
+}
+
+.filterBtn {
+  background: rgba(139, 92, 246, 0.1);
+  border: var(--border-cv);
+  padding: 0.6rem 1.5rem;
+  border-radius: var(--radius-btn);
+  color: var(--text-primary);
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filterBtn:hover {
+  background: rgba(139, 92, 246, 0.25);
+  border-color: var(--color-dot-active);
+  transform: translateY(-2px);
+}
+
+.activeFilter {
+  background: var(--color-dot-active);
+  border-color: transparent;
+  color: white;
+  box-shadow: var(--shadow-btn-hover);
+}
+
+/* ========== Section Description ========== */
+.sectionDesc {
+  color: var(--text-muted);
+  max-width: 600px;
+  margin: 1rem 0 2rem;
+  width: 100%;
+  line-height: 1.6;
+  font-size: 0.9rem;
+}
+
+/* ========== Projects Grid ========== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 2rem;
+}
+
+/* ========== Card ========== */
+.card {
+  background: var(--bg-card);
+  backdrop-filter: blur(10px);
+  border-radius: var(--radius-card-lg);
+  overflow: hidden;
+  border: var(--border-card);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  border-color: var(--border-card-hover);
+  box-shadow: var(--shadow-btn-hover);
+  background: var(--bg-card-hover);
+  transform: translateY(-4px);
+}
+
+/* ========== Image ========== */
+.imageContainer {
+  width: 100%;
+  height: 220px;
+  position: relative;
+  overflow: hidden;
+  background: #1a1a2e;
+}
+
+.projectImage {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease;
+}
+
+.card:hover .projectImage {
+  transform: scale(1.05);
+}
+
+.imageOverlay {
+  position: absolute;
+  inset: 0;
+  background:rgba(192, 192, 192, 0.233);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: var(--text-primary);
+  font-weight: 500;
+  backdrop-filter: blur(4px);
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover .imageOverlay {
+  opacity: 1;
+}
+
+.eyeIcon {
+  width: 32px;
+  height: 32px;
+}
+
+/* ========== Card Content ========== */
+.cardContent {
+  padding: 1.5rem;
+}
+
+.projectCategory {
+  font-size: 0.7rem;
+  color: var(--color-section-tag);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.projectTitle {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.3px;
+}
+
+.projectDescription {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+
+/* ========== Tech Stack ========== */
+.techStack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 1.25rem;
+}
+
+.techBadge {
+  background: rgba(139, 92, 246, 0.15);
+  padding: 0.3rem 0.9rem;
+  border-radius: 30px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  border: var(--border-tech);
+  transition: all 0.2s ease;
+}
+
+.techBadge:hover {
+  background: rgba(139, 92, 246, 0.3);
+  border-color: var(--color-dot-active);
+  transform: translateY(-2px);
+}
+
+/* ========== View Button ========== */
+.viewButton {
+  background: var(--gradient-btn-view);
+  padding: 0.85rem;
+  border-radius: 1.75rem;
+  border: none;
+  width: 100%;
+  color: var(--text-primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.85rem;
+}
+
+.viewButton:hover {
+  box-shadow: var(--shadow-btn-hover);
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.3), rgba(79, 70, 229, 0.15));
+ 
+}
+
+/* ========== No Results ========== */
+.noResults {
+  text-align: center;
+  padding: 4rem;
+  font-size: 1.25rem;
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 1rem;
+  margin-top: 2rem;
+}
+
+/* ========================================
+   RESPONSIVE BREAKPOINTS
+   ======================================== */
+
+/* للشاشات المتوسطة (لابتوب - 1200px) */
+@media (max-width: 1200px) {
+  .searchInput {
+    width: 450px;
+  }
+  
+  .filterContainer {
+    justify-content: center;
+    margin-top: 0;
+  }
+}
+
+/* للشاشات المتوسطة (تابلت - 992px) */
+@media (max-width: 992px) {
+  .container {
+    padding: 5rem 1.5rem;
+  }
+  
+  .headerTop {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  .searchWrapper {
+    top: 0;
+  }
+  
+  .searchInput {
+    width: 400px;
+  }
+  
+  .filterContainer {
+    justify-content: center;
+    margin: 0;
+  }
+  
+  .sectionDesc {
+    text-align: center;
+    margin: 0 auto 2rem;
+  }
+  
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+/* للشاشات الصغيرة (تابلت صغير - 768px) */
+@media (max-width: 768px) {
+  .container {
+    padding: 4rem 1.2rem;
+  }
+  
+  .pageTitle {
+    font-size: 2rem;
+  }
+  
+  .sectionTag {
+    font-size: 0.7rem;
+    justify-content: center;
+  }
+  
+  .searchInput {
+    width: 320px;
+    padding: 0.65rem 2.5rem 0.65rem 1rem;
+    font-size: 0.85rem;
+  }
+  
+  .filterContainer {
+    gap: 0.7rem;
+  }
+  
+  .filterBtn {
+    padding: 0.45rem 1.2rem;
+    font-size: 0.75rem;
+  }
+  
+  .sectionDesc {
+    font-size: 0.8rem;
+    width: 100%;
+  }
+  
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .imageContainer {
+    height: 200px;
+  }
+  
+  .cardContent {
+    padding: 1.2rem;
+  }
+  
+  .projectTitle {
+    font-size: 1.2rem;
+  }
+  
+  .projectDescription {
+    font-size: 0.8rem;
+  }
+  
+  .techBadge {
+    font-size: 0.65rem;
+    padding: 0.25rem 0.7rem;
+  }
+  
+  .viewButton {
+    padding: 0.7rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* للشاشات الصغيرة جداً (موبايل - 576px) */
+@media (max-width: 576px) {
+  .container {
+    padding: 3rem 1rem;
+  }
+  
+  .pageTitle {
+    font-size: 1.6rem;
+  }
+  
+  .sectionTag {
+    font-size: 0.6rem;
+    letter-spacing: 2px;
+  }
+  
+  .point {
+    font-size: 12px;
+    bottom: 1px;
+  }
+  
+  .searchInput {
+    width: 260px;
+    font-size: 0.8rem;
+    padding: 0.6rem 2.2rem 0.6rem 0.8rem;
+  }
+  
+  .clearButton {
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 0.75rem;
+  }
+  
+  .filterContainer {
+    gap: 0.5rem;
+  }
+  
+  .filterBtn {
+    padding: 0.35rem 0.9rem;
+    font-size: 0.65rem;
+  }
+  
+  .sectionDesc {
+    font-size: 0.7rem;
+  }
+  
+  .imageContainer {
+    height: 170px;
+  }
+  
+  .cardContent {
+    padding: 1rem;
+  }
+  
+  .projectCategory {
+    font-size: 0.6rem;
+  }
+  
+  .projectTitle {
+    font-size: 1rem;
+  }
+  
+  .projectDescription {
+    font-size: 0.7rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .techStack {
+    gap: 0.4rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .techBadge {
+    font-size: 0.55rem;
+    padding: 0.2rem 0.5rem;
+  }
+  
+  .viewButton {
+    padding: 0.6rem;
+    font-size: 0.7rem;
+    gap: 0.4rem;
+  }
+  
+  .eyeIcon {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .noResults {
+    padding: 2rem;
+    font-size: 1rem;
+  }
+}
+
+/* للشاشات الصغيرة جداً (موبايل صغير - 400px) */
+@media (max-width: 400px) {
+  .container {
+    padding: 3rem 0.8rem;
+  }
+  
+  .pageTitle {
+    font-size: 1.4rem;
+  }
+  
+  .searchInput {
+    width: 220px;
+    font-size: 0.7rem;
+  }
+  
+  .filterBtn {
+    padding: 0.3rem 0.7rem;
+    font-size: 0.6rem;
+  }
+  
+  .imageContainer {
+    height: 150px;
+  }
+  
+  .projectTitle {
+    font-size: 0.9rem;
+  }
+  
+  .projectDescription {
+    font-size: 0.65rem;
+  }
+  
+  .techBadge {
+    font-size: 0.5rem;
+    padding: 0.15rem 0.4rem;
+  }
+  
+  .viewButton {
+    font-size: 0.65rem;
+    padding: 0.5rem;
+  }
+}

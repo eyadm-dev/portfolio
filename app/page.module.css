@@ -1,0 +1,527 @@
+.hero {
+  padding: 12rem 6rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-height: 100vh;
+  gap: 5rem;
+  background-image: var(--bg-hero-image);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+.liftSide {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: relative;
+  bottom: 2rem;
+}
+
+.liftSide h1 {
+  font-size: 70px;
+  font-weight: bold;
+  background: var(--gradient-title);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.liftSide span {
+  color: var(--text-primary);
+}
+
+.liftSide h2 {
+  font-size: 50px;
+  font-weight: bold;
+  background: var(--gradient-subtitle);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.liftSide h3 {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--color-h3);
+}
+
+.liftSide p {
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--text-secondary);
+}
+
+.liftSide button {
+  width: 18rem;
+  height: 3rem;
+  margin-top: 2rem;
+  font-size: 15px;
+  background: var(--gradient-btn-cv);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  gap: 0.5rem;
+}
+
+.liftSide button:hover {
+
+
+  transform: scale(1.03);
+}
+
+.title {
+  border: var(--border-title);
+  width: 200px;
+  padding: 5px;
+  border-radius: var(--radius-title);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  color: var(--text-primary);
+}
+
+.point {
+  color: var(--color-point);
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.image {
+  border-radius: 42%;
+  object-fit: cover;
+  position: relative;
+  bottom: 5rem;
+  left: -1rem;
+  transition: .3s ease-in-out;
+  filter: drop-shadow(var(--shadow-image));
+}
+
+.rightSide {
+  position: relative;
+  bottom: 1rem;
+  width: 35%;
+  height: 520px;
+  display: flex;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+/* الحاوية الرئيسية للأيقونات */
+.skills {
+  position: absolute;
+  top: -20;
+  left: -30;
+  width: 100%;
+  height: 100%;
+  transition: 2.5s ease-in-out;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+/* كل الأيقونات */
+.skills img {
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  background: var(--gradient-icon);
+  padding: 5px;
+  border-radius: var(--radius-icon);
+  border: var(--border-icon);
+  animation: float 6s ease-in-out infinite;
+  pointer-events: auto;
+  transition: transform .3s ease;
+}
+
+.skills:hover {
+  transform: translateX(-50px);
+}
+
+/* حركة التطويف الأساسية */
+@keyframes float {
+  0% {
+    transform: translateY(0px) translateX(0px);
+  }
+  50% {
+    transform: translateY(-30px) translateX(10px);
+  }
+  100% {
+    transform: translateY(0px) translateX(0px);
+  }
+}
+
+/* حركة إضافية لأيقونات معينة */
+@keyframes floatAround {
+  0% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+  25% {
+    transform: translate(12px, -12px) rotate(3deg);
+  }
+  50% {
+    transform: translate(0px, -20px) rotate(0deg);
+  }
+  75% {
+    transform: translate(-10px, -10px) rotate(-3deg);
+  }
+  100% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+}
+
+/* توزيع الأيقونات حول الصورة */
+.skills img:nth-child(1) {
+  top: -20px;
+  right: 10px;
+  animation: float 4.5s ease-in-out infinite;
+  animation-delay: 0s;
+}
+
+.skills img:nth-child(2) {
+  bottom: 50px;
+  right: -15px;
+  animation: float 3s ease-in-out infinite;
+  animation-delay: 0.5s;
+}
+
+.skills img:nth-child(3) {
+  top: 50px;
+  left: -20px;
+  animation: floatAround 76 ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+.skills img:nth-child(4) {
+  bottom: 30px;
+  left: 60px;
+  animation: float 5.5s ease-in-out infinite;
+  animation-delay: 1.5s;
+}
+
+.skills img:nth-child(5) {
+  top: -80px;
+  right: 160px;
+  animation: floatAround 6.5s ease-in-out infinite;
+  animation-delay: 0.8s;
+}
+
+button.clickDownBtn1 {
+  background: var(--gradient-btn-cv);
+  border: var(--border-cv);
+  padding: 12px 28px;
+  border-radius: 20px ;
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.12rem;
+  font-weight: 500;
+}
+
+.clickDownBtn1:hover {
+  background: var(--gradient-btn-cv-hover);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-btn-hover);
+  gap: 12px;
+}
+
+.clickDownBtn1:active {
+  transform: translateY(0);
+}
+
+/* ========================================
+   RESPONSIVE BREAKPOINTS
+   ======================================== */
+
+/* للشاشات الكبيرة (لابتوب - 1200px) */
+@media (max-width: 1200px) {
+  .hero {
+    padding: 8rem 4rem;
+    gap: 3rem;
+  }
+  
+  .liftSide h1 {
+    font-size: 55px;
+  }
+  
+  .liftSide h2 {
+    font-size: 40px;
+  }
+  
+  .rightSide {
+    width: 40%;
+    height: 450px;
+  }
+  
+  .image {
+    width: 350px;
+    height: auto;
+    bottom: 3rem;
+  }
+  
+  .skills img {
+    width: 55px;
+    height: 55px;
+  }
+}
+
+/* للشاشات المتوسطة (تابلت - 992px) */
+@media (max-width: 992px) {
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 6rem 3rem;
+    gap: 2rem;
+    max-height: none;
+    min-height: auto;
+  }
+  
+  .liftSide {
+    width: 100%;
+    align-items: center;
+    bottom: 0;
+  }
+  
+  .liftSide h1 {
+    font-size: 48px;
+  }
+  
+  .liftSide h2 {
+    font-size: 35px;
+  }
+  
+  .liftSide h3 {
+    font-size: 18px;
+  }
+  
+  .liftSide p {
+    max-width: 80%;
+    margin: 0 auto;
+    font-size: 14px;
+  }
+  
+  .title {
+    margin: 0 auto;
+  }
+  
+  .rightSide {
+    width: 50%;
+    height: auto;
+    bottom: 0;
+  }
+  
+  .image {
+    width: 300px;
+    height: auto;
+    bottom: 0;
+    left: 0;
+  }
+  
+  .skills img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* للشاشات الصغيرة (تابلت صغير - 768px) */
+@media (max-width: 768px) {
+  .hero {
+    padding: 5rem 2rem;
+    gap: 1.5rem;
+  }
+  
+  .liftSide h1 {
+    font-size: 38px;
+  }
+  
+  .liftSide h2 {
+    font-size: 28px;
+  }
+  
+  .liftSide h3 {
+    font-size: 16px;
+  }
+  
+  .liftSide p {
+    font-size: 13px;
+    max-width: 90%;
+  }
+  
+  .title {
+    width: 180px;
+    font-size: 13px;
+  }
+  
+  .point {
+    font-size: 22px;
+  }
+  
+  .rightSide {
+    width: 60%;
+  }
+  
+  .image {
+    width: 260px;
+  }
+  
+  .skills img {
+    width: 45px;
+    height: 45px;
+  }
+  
+  button.clickDownBtn1 {
+    padding: 10px 24px;
+    font-size: 1rem;
+  }
+  
+  .skills img:nth-child(1) { top: -15px; right: 5px; }
+  .skills img:nth-child(2) { bottom: 40px; right: -10px; }
+  .skills img:nth-child(3) { top: 40px; left: -15px; }
+  .skills img:nth-child(4) { bottom: 20px; left: 40px; }
+  .skills img:nth-child(5) { top: -60px; right: 120px; }
+}
+
+/* للشاشات الصغيرة جداً (موبايل - 576px) */
+@media (max-width: 576px) {
+  .hero {
+    padding: 4rem 1.5rem;
+  }
+  
+  .liftSide h1 {
+    font-size: 32px;
+  }
+  
+  .liftSide h2 {
+    font-size: 24px;
+  }
+  
+  .liftSide h3 {
+    font-size: 14px;
+  }
+  
+  .liftSide p {
+    font-size: 12px;
+    max-width: 100%;
+  }
+  
+  .liftSide button {
+    width: 14rem;
+    height: 2.6rem;
+    font-size: 13px;
+  }
+  
+  .title {
+    width: 160px;
+    padding: 4px;
+    font-size: 11px;
+  }
+  
+  .point {
+    font-size: 18px;
+  }
+  
+  .rightSide {
+    width: 75%;
+  }
+  
+  .image {
+    width: 220px;
+  }
+  
+  .skills img {
+    width: 40px;
+    height: 40px;
+    padding: 4px;
+  }
+  
+  button.clickDownBtn1 {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+  }
+  
+  .skills img:nth-child(1) { top: -10px; right: 0px; }
+  .skills img:nth-child(2) { bottom: 30px; right: -8px; }
+  .skills img:nth-child(3) { top: 30px; left: -10px; }
+  .skills img:nth-child(4) { bottom: 15px; left: 25px; }
+  .skills img:nth-child(5) { top: -40px; right: 80px; }
+}
+
+/* للشاشات الصغيرة جداً (موبايل صغير - 450px) */
+@media (max-width: 450px) {
+  .hero {
+    padding: 3rem 1rem;
+    min-height: 70vh;
+  }
+  
+  .liftSide h1 {
+    font-size: 28px;
+  }
+  
+  .liftSide h2 {
+    font-size: 22px;
+  }
+  
+  .liftSide h3 {
+    font-size: 13px;
+  }
+  
+  .liftSide p {
+    font-size: 11px;
+  }
+  
+  .liftSide button {
+    width: 12rem;
+    height: 2.4rem;
+    font-size: 12px;
+  }
+  
+  .title {
+    width: 145px;
+    font-size: 10px;
+    margin-top: 20px;
+  }
+  
+  .point {
+    font-size: 16px;
+  }
+  
+  .rightSide {
+    width: 85%;
+  }
+  
+  .image {
+    width: 250px;
+  }
+  
+  .skills img {
+    width: 35px;
+    height: 35px;
+    padding: 3px;
+  }
+  
+  button.clickDownBtn1 {
+    padding: 6px 16px;
+    font-size: 0.85rem;
+  }
+  
+  .skills img:nth-child(1) { top: 90px; right: -30px; }
+  .skills img:nth-child(2) { bottom: 20px; right: -5px; }
+  .skills img:nth-child(3) { top: 20px; left: -8px; }
+  .skills img:nth-child(4) { bottom: 10px; left: 15px; }
+  .skills img:nth-child(5) { top: 10px; right: 50px; }
+}

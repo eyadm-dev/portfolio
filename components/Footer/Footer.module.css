@@ -1,0 +1,236 @@
+.footer {
+  background: var(--bg-footer);
+  border-top: var(--border-footer-top);
+  padding: 4rem 2rem 2rem;
+  border: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Top Section */
+.topSection {
+  text-align: center;
+  padding-bottom: 3rem;
+  border-bottom: var(--border-footer-bottom);
+  margin-bottom: 3rem;
+}
+
+.workTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: var(--gradient-footer-title);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.5px;
+}
+
+.contactButtons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.contactBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--gradient-btn-cv);
+  border: var(--border-cv);
+  padding: 12px 28px;
+  border-radius: 50px;
+  color: var(--text-primary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(4px);
+}
+
+.contactBtn:hover {
+  background: var(--gradient-btn-cv-hover);
+  border-color: transparent;
+  box-shadow: var(--shadow-btn-hover);
+}
+
+/* Middle Section */
+.middleSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: var(--border-footer-bottom);
+  margin-bottom: 2rem;
+}
+
+.middleSection .sectionTitle {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text-hover);
+  margin-bottom: 1.2rem;
+  letter-spacing: 1px;
+}
+
+.servicesList {
+  list-style: none;
+  padding: 0;
+}
+
+.servicesList li {
+  color: var(--text-secondary);
+  margin-bottom: 0.8rem;
+  padding-left: 1.2rem;
+  position: relative;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.servicesList li::before {
+  content: '▹';
+  position: absolute;
+  left: 0;
+  color: var(--color-dot-active);
+}
+
+.servicesList li:hover {
+  color: var(--text-primary);
+  transform: translateX(5px);
+}
+
+.address {
+  color: var(--color-address);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  display: flex;
+  gap: 4px;
+}
+
+.socialLinks h4 {
+  color: var(--text-light);
+  font-size: 0.9rem;
+  margin-bottom: 0.8rem;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.socialIcons a {
+  color: var(--color-social-icon);
+  font-size: 1.4rem;
+  transition: all 0.3s ease;
+}
+
+.socialIcons a:hover {
+  color: var(--color-social-icon-hover);
+  transform: translateY(-3px);
+}
+
+/* Bottom Section */
+.bottomSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-top: 1rem;
+}
+
+.copyright {
+  color: var(--color-copyright);
+  font-size: 0.85rem;
+}
+
+.backToTop {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: var(--border-backtotop);
+  padding: 8px 20px;
+  border-radius: 40px;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.backToTop:hover {
+  background: var(--bg-backtotop-hover);
+  border-color: var(--color-dot-active);
+}
+
+.logoWrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 38px;
+  font-weight: bold;
+  background: var(--gradient-logo);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer {
+    padding: 3rem 1.5rem 1.5rem;
+  }
+  
+  .workTitle {
+    font-size: 1.8rem;
+  }
+  
+  .middleSection {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .bottomSection {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  
+  .contactButtons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .contactBtn {
+    width: 200px;
+    justify-content: center;
+  }
+  
+  .servicesList li {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .workTitle {
+    font-size: 1.5rem;
+  }
+  
+  .middleSection .sectionTitle {
+    font-size: 1.1rem;
+  }
+  
+  .socialIcons {
+    justify-content: center;
+  }
+  
+  .copyright {
+    font-size: 0.7rem;
+  }
+}
