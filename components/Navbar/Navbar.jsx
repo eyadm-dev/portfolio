@@ -14,6 +14,19 @@ export default function Navbar({ toggleTheme, currentTheme }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef(null);
 
+
+
+  const downloadCV = () => {
+  const link = document.createElement('a');
+  link.href = '/cv.pdf';
+  link.download = 'EYAD_Mohamed_CV.pdf';
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
+
+
+
   // Variants for stagger animation
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -163,6 +176,7 @@ export default function Navbar({ toggleTheme, currentTheme }) {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             transition={{ duration: 0.2 }}
+            onClick={downloadCV}
           >
             Download CV  
             <ArrowInDownStrokeCircleHalf
