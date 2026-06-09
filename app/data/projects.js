@@ -1,5 +1,19 @@
 export const projectsData = [
+  
+    {
+    id: 9,
+    title: "ICO Store Website",
+    description: "Eco Store - Sustainable electronics e-commerce platform built with Next.js, featuring product filtering, cart management, favorites, and secure checkout simulation.",
+    image: "/imgs/projects-img/project-0.png",
+    tech: ["HTML", "CSS", "JavaScript", "React", "Next.js"],
+    category: "E-Commerce",
+    featured: true,
+    liveLink: "https://eco-store-main.vercel.app/",
+    
+  },
   {
+
+    
     id: 1,
     title: "E-Commerce Weapons Website",
     description: "A complete e-commerce website featuring product filtering, cart system, and categories. Built with Next.js and React Context for optimal performance.",
@@ -79,4 +93,5 @@ export const projectsData = [
     featured: false,
     
   },
+
 ];

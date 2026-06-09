@@ -44,7 +44,7 @@ export default function Home() {
           <h1> <span>I'm</span> EYAD Mohamed</h1>
           <h3>Frontend Developer / UI/UX Designer </h3>
           <p>
-            I'm a frontend developer based in Cairo, Egypt. I have experience in
+            I'm a frontend developer based in Benisuef, Egypt. I have experience in
             React, Next.js. I'm a self-taught developer and I'm always learning
             new things.
           </p>

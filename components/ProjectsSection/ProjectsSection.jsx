@@ -147,7 +147,7 @@ export default function ProjectsSection() {
                 <h3 className={styles.cardTitle}>{nextProject.title.substring(0, 20)}...</h3>
                 <p className={styles.cardDesc}>{nextProject.description.substring(0, 60)}...</p>
                 <div className={styles.techStack}>
-                  {nextProject.tech.slice(0, 2).map((tech, idx) => (
+                  {nextProject.tech.slice(0, 5).map((tech, idx) => (
                     <span key={idx} className={styles.techBadge}>{tech}</span>
                   ))}
                 </div>
@@ -179,7 +179,7 @@ export default function ProjectsSection() {
                   <h2 className={styles.cardTitle}>{currentProject.title}</h2>
                   <p className={styles.cardDesc}>{currentProject.description}</p>
                   <div className={styles.techStack}>
-                    {currentProject.tech.slice(0, 3).map((tech, idx) => (
+                    {currentProject.tech.slice(0, 5).map((tech, idx) => (
                       <span key={idx} className={styles.techBadge}>{tech}</span>
                     ))}
                   </div>
