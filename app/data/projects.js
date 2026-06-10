@@ -1,28 +1,29 @@
 export const projectsData = [
-  
-    {
+
+  {
     id: 9,
-    title: "ICO Store Website",
-    description: "Eco Store - Sustainable electronics e-commerce platform built with Next.js, featuring product filtering, cart management, favorites, and secure checkout simulation.",
+    title: "ECO Store Website",
+    description: "Eco Store - Sustainable electronics e-commerce platform built with Next.js , dummy data, featuring product filtering, cart management, favorites, and secure checkout simulation.",
     image: "/imgs/projects-img/project-0.png",
-    tech: ["HTML", "CSS", "JavaScript", "React", "Next.js"],
+    tech: ["HTML", "CSS", "JavaScript", "React", "Next.js", "80% Responsive"],
     category: "E-Commerce",
     featured: true,
     liveLink: "https://eco-store-main.vercel.app/",
-    
-  },
-  {
 
-    
-    id: 1,
-    title: "E-Commerce Weapons Website",
-    description: "A complete e-commerce website featuring product filtering, cart system, and categories. Built with Next.js and React Context for optimal performance.",
-    image: "/imgs/projects-img/project-1.png",
-    tech: ["HTML", "CSS"],
-    category: "E-Commerce",
-    featured: true,
-    liveLink: "https://f4-weppons-462c8.netlify.app/",
   },
+
+  {
+    id: 8,
+    title: "Holistic Gym Website",
+    description: "A comprehensive gym website featuring class schedules, trainer profiles, and membership options.",
+    image: "/imgs/projects-img/project-5.png",
+    tech: ["⚠️⚠️ in Progress ..."],
+    category: "Websites",
+    featured: false,
+
+  },
+
+
   {
     id: 2,
     title: "Kick Wear Website",
@@ -33,6 +34,32 @@ export const projectsData = [
     featured: true,
     liveLink: "https://telwind-789752project.netlify.app/",
   },
+
+  {
+    id: 5,
+    title: "Medinest Website",
+    description: "A comprehensive hospital website featuring emergency services, medical departments, doctor profiles, and appointment booking system. Built with modern design principles and patient-centered approach.",
+    image: "/imgs/projects-img/project55.png",
+    tech: ["HTML", "CSS"],
+    category: "Websites",
+    featured: false,
+    liveLink: "https://medinest-41b242.netlify.app/",
+  },
+
+
+  {
+
+
+    id: 1,
+    title: "E-Commerce Weapons Website",
+    description: "A complete e-commerce website featuring product filtering, cart system, and categories. Built with Next.js and React Context for optimal performance.",
+    image: "/imgs/projects-img/project-1.png",
+    tech: ["HTML", "CSS"],
+    category: "E-Commerce",
+    featured: true,
+    liveLink: "https://f4-weppons-462c8.netlify.app/",
+  },
+
   {
     id: 3,
     title: "Sugar Bloom",
@@ -53,16 +80,7 @@ export const projectsData = [
     featured: false,
     liveLink: "https://prismatic-croissant-289333.netlify.app/",
   },
-  {
-    id: 5,
-    title: "Medinest Website",
-    description: "A comprehensive hospital website featuring emergency services, medical departments, doctor profiles, and appointment booking system. Built with modern design principles and patient-centered approach.",
-    image: "/imgs/projects-img/project55.png",
-    tech: ["HTML", "CSS"],
-    category: "Websites",
-    featured: false,
-    liveLink: "https://medinest-41b242.netlify.app/",
-  },
+
   {
     id: 6,
     title: "Al Batbot Website",
@@ -83,15 +101,6 @@ export const projectsData = [
     featured: false,
     liveLink: "https://guileless-truffle-42cdc5.netlify.app/",
   },
-  {
-    id: 8,
-    title: "Holistic Gym Website",
-    description: "A comprehensive gym website featuring class schedules, trainer profiles, and membership options.",
-    image: "/imgs/projects-img/project-5.png",
-    tech: ["HTML", "CSS"],
-    category: "Websites",
-    featured: false,
-    
-  },
+
 
 ];

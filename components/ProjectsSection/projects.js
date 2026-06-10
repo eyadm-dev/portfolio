@@ -2,7 +2,7 @@ export const projectsData = [
       {
     id: 9,
     title: "ICO Store Website",
-    description: "Eco Store - Sustainable electronics e-commerce platform built with Next.js, featuring product filtering, cart management, favorites, and secure checkout simulation.",
+    description: "Eco Store - Sustainable electronics e-commerce platform built with Next.js dummy data, featuring product filtering, cart management, favorites, and secure checkout simulation.",
     image: "/imgs/projects-img/project-0.png",
     tech: ["HTML", "CSS", "JavaScript", "React", "Next.js"],
     category: "E-Commerce",

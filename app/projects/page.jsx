@@ -245,7 +245,7 @@ export default function ProjectsPage() {
                       whileInView={{ opacity: 1 }}
                       transition={{ delay: index * 0.1 + 0.5 }}
                     >
-                      {project.tech.slice(0, 5).map((tech, techIndex) => (
+                      {project.tech.slice(0, 6).map((tech, techIndex) => (
                         <motion.span 
                           key={techIndex} 
                           className={styles.techBadge}

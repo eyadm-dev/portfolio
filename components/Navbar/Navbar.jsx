@@ -8,7 +8,7 @@ import { HiMenu, HiX } from "react-icons/hi";
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState, useRef, useEffect } from 'react';
-
+import MusicPlayer from "@/components/MusicPlayer/MusicPlayer";
 export default function Navbar({ toggleTheme, currentTheme }) {
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -152,6 +152,7 @@ export default function Navbar({ toggleTheme, currentTheme }) {
         </motion.ul>
 
         <div className={styles.rightGroup}>
+           <MusicPlayer className={styles.musicPlayer} />
           <motion.div 
             className={styles.mode}
             variants={modeVariants}
@@ -167,7 +168,7 @@ export default function Navbar({ toggleTheme, currentTheme }) {
               <MdDarkMode size={30} />
             )}
           </motion.div>
-        
+             
           <motion.button 
             className={styles.cv}
             variants={cvVariants}

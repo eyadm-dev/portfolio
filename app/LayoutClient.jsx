@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
-
+import MusicPlayer from "@/components/MusicPlayer/MusicPlayer";
 export default function LayoutClient({ children }) {
   const [theme, setTheme] = useState("dark");
 
@@ -31,6 +31,7 @@ export default function LayoutClient({ children }) {
       <Navbar toggleTheme={toggleTheme} currentTheme={theme} />
       <main>{children}</main>
       <Footer />
+      
     </>
   );
 }
