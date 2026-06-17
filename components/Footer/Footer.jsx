@@ -82,8 +82,8 @@ export default function Footer() {
             <div className={styles.socialLinks}>
               <h4>Connect with me</h4>
               <div className={styles.socialIcons}>
-                <motion.a href="#" whileHover={{ y: -3 }}><FaFacebook /></motion.a>
-                <motion.a href="#" whileHover={{ y: -3 }}><FaLinkedin /></motion.a>
+                <motion.a href="https://www.facebook.com/share/18wTYk4z3j/" target="_blank" whileHover={{ y: -3 }}><FaFacebook /></motion.a>
+                <motion.a href="https://www.linkedin.com/in/eyad-mohamed-410246412/"   target="_blank" whileHover={{ y: -3 }}><FaLinkedin /></motion.a>
                 <motion.a href="#" whileHover={{ y: -3 }}><FaTwitter /></motion.a>
                 <motion.a href="#" whileHover={{ y: -3 }}><FaBehance /></motion.a>
               </div>

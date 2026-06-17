@@ -1,0 +1,45 @@
+.audioButtonContainer {
+  position: fixed;
+  bottom: 16px;
+  right: 280px;
+  z-index: 50;
+}
+
+/* ===== Audio Button ===== */
+.audioButton {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--gradient-btn-cv1);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(175, 231, 244, 0.116);
+}
+
+.audioButton:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(182, 34, 148, 0.17);
+}
+
+.audioButton:active {
+  transform: scale(0.95);
+}
+
+
+@media (max-width: 480px) {
+ .audioButtonContainer{
+  right: 156px;
+  top: 5px;
+ }
+}
+@media (max-width: 880px) {
+ .audioButtonContainer{
+  right: 230px;
+  top: 10px;
+ }
+}

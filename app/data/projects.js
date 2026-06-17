@@ -5,7 +5,7 @@ export const projectsData = [
     title: "ECO Store Website",
     description: "Eco Store - Sustainable electronics e-commerce platform built with Next.js , dummy data, featuring product filtering, cart management, favorites, and secure checkout simulation.",
     image: "/imgs/projects-img/project-0.png",
-    tech: ["HTML", "CSS", "JavaScript", "React", "Next.js", "80% Responsive"],
+    tech: ["HTML", "CSS", "JavaScript", "React", "Next.js", " Responsive"],
     category: "E-Commerce",
     featured: true,
     liveLink: "https://eco-store-main.vercel.app/",
